@@ -1,0 +1,231 @@
+:root {
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+
+}
+
+body {
+
+  background-color: var(--very-dark-blue);
+  background-image: url(../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 7.2rem 1rem 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 18.5rem;
+  margin: auto auto 4rem;
+}
+
+  .fylo-menu {
+    position: relative;
+    display: block;
+    background-color: var(--dark-blue);
+    padding: 2rem 2rem 2rem 1.5rem;
+    width: 18.5rem;
+    border-radius: 0.6rem 5rem 0.6rem 0.6rem;
+  }
+
+    .fylo-head {
+      position: relative;
+      display: block;
+      padding: 0.2rem 0 1.5rem 0;
+      transform: scale(0.9);
+
+    }
+
+    .fylo-body {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      margin-left: 0.6rem;
+    }
+
+      .fylo-body-content {
+        position: relative;
+        display: block;
+        padding: 0.6rem 0;
+        border-radius: 0.6rem;
+        background-color: var(--very-dark-blue);
+        margin-right: 1rem;
+        width: 2.7rem;
+      }
+
+        .svg-image {
+          display: block;
+          margin: auto;
+          transform: scale(0.9);
+
+        }
+  .fylo-storage {
+    position: relative;
+    display: block;
+    background-color: var(--dark-blue);
+    padding: 1rem 1.5rem 2.5rem;
+    width: 18.5rem;
+    border-radius: 0.6rem;
+    margin: 1rem 0;
+  }
+
+
+    .fylo-storage p {
+      padding: 0 1rem;
+      color: white;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+
+    .fylo-storage .text {
+      opacity: 0.6;
+    }
+
+    .fylo-storage .byte {
+      position: relative;
+      color: #fff;
+      opacity: 9;
+      opacity: 0.9;
+    }
+
+      .progress-bar {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 1rem;
+        background-color: var(--very-dark-blue);
+        border-radius: 1.5rem;
+        padding: 0.15rem;
+      }
+
+        .progress-bar-level {
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          width: 72%;
+          height: 100%;
+          background: rgb(255,149,185);
+          background: linear-gradient(90deg, rgba(255,149,185,1) 0%, rgba(252,102,154,1) 100%);
+          border-radius: 1rem;
+        }
+
+          .progress-bar-level-point {
+            position: relative;
+            display: inline-block;
+            margin: auto 0;
+            height: 0.6rem;
+            width: 0.6rem;
+            border-radius: 100%;
+            background-color: #fff;
+          }
+
+          .byte-limit {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.7rem;
+          }
+
+          .byte-remaining {
+            position: absolute;
+            left: 14%;
+            top: 110%;
+            display: flex;
+            padding: 0.8rem 1.5rem;
+            background-color: #fff;
+            white-space: nowrap;
+            border-radius: 10px;
+          }
+
+          .byte-remaining h1,
+          .byte-remaining-unit {
+            display: block;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            margin: auto;
+
+          }
+          .byte-remaining h1 {
+            color:var(--very-dark-blue);
+            font-size: 2rem;
+          }
+
+          .byte-remaining-unit {
+            color:var(--grayish-blue);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            padding-left: 0.5rem;
+            padding-top: 0.5rem;
+
+          }
+
+@media only screen and (min-width: 550px) {
+  body {
+    background-image: url(../images/bg-desktop.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: 0 19.5rem;
+  }
+  .container {
+    margin-top: 7rem;
+    flex-direction: row;
+    max-width: 50rem;
+  }
+    .fylo-menu {
+      width: 19rem;
+      border-radius: 0.6rem 5rem 0.6rem 0.6rem;
+
+    }
+
+    .fylo-storage {
+      width: 30rem;
+      margin: 2rem 0 0 1rem;
+    }
+
+    .fylo-storage p {
+      padding: 0 0.3rem;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    .byte-limit {
+      font-size: 0.8rem;
+
+    }
+    .byte-remaining  {
+      left: auto;
+      top: auto;
+      right: 0;
+      bottom: 300%;
+      border-radius: 10px 10px 0 10px;
+    }
+    .byte-remaining::after {
+      position: absolute;
+      top: 100%;
+      right: 0%;
+      display: block;
+      content: "";
+      border: 1rem solid transparent;
+      border-top: 1rem solid #fff;
+      border-right: 0;
+    }
+
+}
+
+
+
+
+
+
+.attribution { white-space: nowrap; font-size: 11px; text-align: center;color:#fff; }
+.attribution a { color: var(--grayish-blue); text-decoration: none;}
